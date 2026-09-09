@@ -56,3 +56,22 @@ for i in range(0, 181, 30):
         f"{normal_stresses[i]:10.2f}    "
         f"{shear_stresses[i]:10.2f}"
     )
+
+
+max_normal_stress = max(normal_stresses)
+angle_max_normal_stress = normal_stresses.index(max_normal_stress)
+print(
+    f"Maximum normal stress is {max_normal_stress:.2f} at angle of {angle_max_normal_stress}"
+)
+
+min_normal_stress = min(normal_stresses)
+angle_min_normal_stress = normal_stresses.index(min_normal_stress)
+print(
+    f"Minimum normal stress is {min_normal_stress:.2f} at angle of {angle_min_normal_stress}"
+)
+
+max_absolute_shear_stress = max(shear_stresses)
+angle_max_absolute_shear_stress = shear_stresses.index(max_absolute_shear_stress)
+print(
+    f"Maximum absolute shear stress is {max_absolute_shear_stress:.2f} at angle of {angle_max_absolute_shear_stress}"
+)
